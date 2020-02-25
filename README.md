@@ -32,7 +32,10 @@ or
 - Go to your project folder from your terminal
 - cd blog-backend
 - Run: mvnw spring-boot:run
+
+
 ####Frontend
+
 (터미널에서 아래명령어 입력하여 실행, 오류발생시 하단의 라이브러리 수동입력하여 추가)
 - Go to your project folder from your terminal
 - cd restapi-apollo-category
@@ -40,10 +43,18 @@ or
 - After install, run: npm run start or yarn start
 - It will open your browser(http://localhost:3000)
 - if error occur do 'yarn add(npm install) @apollo/react-hooks apollo-cache-inmemory apollo-client apollo-link-http apollo-link-rest graphql graphql-tag graphql-anywhere typescript styled-components'
+
+
 ####H2 Database
 - http://localhost:8090/console/
+
+
 ####CORS Issue Resolve
 - In package.json,  "proxy": "http://localhost:8090/"
+
+
 ###Screenshots
+
+
 <img src="https://user-images.githubusercontent.com/45805470/75224285-91024e80-57eb-11ea-9040-c361c6fbd23a.PNG" width="70%"></img>
 <img src="https://user-images.githubusercontent.com/45805470/75224330-a37c8800-57eb-11ea-9a6b-b35c59cc9f6c.PNG" width="70%"></img>
