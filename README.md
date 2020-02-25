@@ -24,7 +24,7 @@ spring에 rest controller가 rest api를 생성하여 그것을 react apollo에�
 - Install Node.js from the Node.js website
 - Clone the repo git clone https://github.com/dksxoghl/react-spring-restApi-graphql.git
 
-####Backend
+#### Backend
 (spring boot run클릭하거나 터미널에서 아래명령어 입력하여 실행)
 - Run DemoApplication(spring-boot)
 
@@ -34,7 +34,7 @@ or
 - Run: mvnw spring-boot:run
 
 
-####Frontend
+#### Frontend
 
 (터미널에서 아래명령어 입력하여 실행, 오류발생시 하단의 라이브러리 수동입력하여 추가)
 - Go to your project folder from your terminal
@@ -45,15 +45,15 @@ or
 - if error occur do 'yarn add(npm install) @apollo/react-hooks apollo-cache-inmemory apollo-client apollo-link-http apollo-link-rest graphql graphql-tag graphql-anywhere typescript styled-components'
 
 
-####H2 Database
+#### H2 Database
 - http://localhost:8090/console/
 
 
-####CORS Issue Resolve
+#### CORS Issue Resolve
 - In package.json,  "proxy": "http://localhost:8090/"
 
 
-###Screenshots
+### Screenshots
 
 
 <img src="https://user-images.githubusercontent.com/45805470/75224285-91024e80-57eb-11ea-9040-c361c6fbd23a.PNG" width="70%"></img>
