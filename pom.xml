@@ -44,6 +44,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.moowork.gradle/gradle-node-plugin &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.moowork.gradle</groupId>-->
+<!--            <artifactId>gradle-node-plugin</artifactId>-->
+<!--            <version>0.13</version>-->
+<!--        </dependency>-->
+
     </dependencies>
 
     <build>
@@ -51,6 +59,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.github.mjeanroy</groupId>
+                <artifactId>node-maven-plugin</artifactId>
+                <version>0.2.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <failOnMissingScript>false</failOnMissingScript>
+                </configuration>
             </plugin>
         </plugins>
     </build>

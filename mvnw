@@ -308,3 +308,35 @@ exec "$JAVACMD" \
   -classpath "$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar" \
   "-Dmaven.home=${M2_HOME}" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
   ${WRAPPER_LAUNCHER} $MAVEN_CONFIG "$@"
+
+def webappDir = "$projectDir/apollo-restApi-category"
+
+// node 버전 및 npm, node 설치파일 저장 디렉토리 명시
+node {
+    version = '12.6.0'
+    download=true
+    workDir = file("${project.buildDir}/nodejs")
+    npmWorkDir=file("${project.buildDir}/npm")
+}
+
+// npm install 과정
+task appNpmInstall(type: NpmTask) {
+    workingDir = file("${project.projectDir}/apollo-restApi-category")
+    args = ["install"]
+}
+
+// yarn build
+task yarnBuild(type: YarnTask) {
+    workingDir = file("${project.projectDir}/apollo-restApi-category")
+    args = ['build']
+}
+
+// 빌드된 결과 resources로 이동
+task copyWebApp(type: Copy) {
+    from "apollo-restApi-category/build"
+    into 'build/resources/main/static/.'
+}
+
+yarnBuild.dependsOn appNpmInstall
+copyWebApp.dependsOn yarnBuild
+compileJava.dependsOn copyWebApp
